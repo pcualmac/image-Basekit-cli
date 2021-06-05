@@ -4,15 +4,19 @@ namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
+use App\Support\Validation;
+use Storage;
+use Carbon\Carbon;
 
-class Download extends Command
+class Store extends Command
 {
+    use Validation;
     /**
      * The signature of the command.
      *
      * @var string
      */
-    protected $signature = 'command:download
+    protected $signature = 'command:store
                             {realpath : full path of a picture (required)}';
 
     /**
@@ -20,7 +24,7 @@ class Download extends Command
      *
      * @var string
      */
-    protected $description = 'Download';
+    protected $description = 'Store file.';
 
     /**
      * Execute the console command.
@@ -29,26 +33,18 @@ class Download extends Command
      */
     public function handle()
     {
-        if(config('filesystems.default') == 'local')
+        $realpath = $this->argument('realpath');
+        if($this->validation($realpath))
         {
-            $this->task("The default file systems is local", function (){
-                return false;
+            Storage::copy($realpath, storage_path().'_'.Carbon::now()->timestamp);
+            $this->task("File ".$realpath." Stored?", function (){
+                return true;
             });
         }
-        else{
-            $realpath = $this->argument('realpath');
-            if($this->validation($realpath))
-            {
-                Storage::copy($realpath, storage_path().'_'.Carbon::now()->timestamp);
-                $this->task("File ".$realpath." Stored?", function (){
-                    return true;
-                });
-            }
-            else {
-                $this->task("File ".$realpath." Stored?", function (){
-                    return false;
-                });
-            }
+        else {
+            $this->task("File ".$realpath." Stored?", function (){
+                return false;
+            });
         }
     }
 

@@ -4,22 +4,26 @@ namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
+use App\Support\Validation;
+use Storage;
 
 class Delete extends Command
 {
+    use Validation;
     /**
      * The signature of the command.
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'command:delete
+                            {realpath : linux full path of a picture (required)}';
 
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Delete file.';
 
     /**
      * Execute the console command.
@@ -28,7 +32,19 @@ class Delete extends Command
      */
     public function handle()
     {
-        //
+        $realpath = $this->argument('realpath');
+        if($this->validation($realpath))
+        {
+            Storage::delete($realpath);
+            $this->task("File ".$realpath." deleted?", function (){
+                return true;
+            });
+        }
+        else {
+            $this->task("File ".$realpath." deleted?", function (){
+                return false;
+            });
+        }
     }
 
     /**

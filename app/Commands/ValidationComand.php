@@ -4,13 +4,13 @@ namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
-use App\Support\Validation as Validetor;
-
+// use App\Support\Validation as Validetor;
+use App\Support\Validation;
 
 use Storage;
 // use \Illuminate\Contracts\Validation\Validator;
 
-class Validation extends Command
+class ValidationComand extends Command
 {
     /**
      * The signature of the command.
@@ -60,7 +60,7 @@ class Validation extends Command
             });
         }else{
             $this->task("Is ".$realpath." a valid image?", function () {
-                return true;
+                return false;
             });
         }
     }

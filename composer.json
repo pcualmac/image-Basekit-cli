@@ -17,6 +17,7 @@
     ],
     "require": {
         "php": "^7.3|^8.0",
+        "illuminate/support": "^8.45",
         "intonate/tinker-zero": "^1.2",
         "laminas/laminas-text": "^2.8",
         "laravel-zero/framework": "^8.8",
