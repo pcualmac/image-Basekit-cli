@@ -3,9 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://packagist.org/packages/jeffochoa/amp-validator"><img src="https://poser.pugx.org/jeffochoa/amp-validator/d/total.svg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/jeffochoa/amp-validator"><img src="https://poser.pugx.org/jeffochoa/amp-validator/v/stable.svg" alt="Latest Version"></a>
-  <a href="https://packagist.org/packages/jeffochoa/amp-validator"><img src="https://poser.pugx.org/jeffochoa/amp-validator/license.svg" alt="License"></a>
+
 </p>
 
 ## Task:
@@ -64,3 +62,4 @@ php image-Basekit-cli command:download <source> <path> <destination> <path>
 ```
 - [ ] Add Menu
 - [ ] Excute Build 
+- [ ] Add to packagist
