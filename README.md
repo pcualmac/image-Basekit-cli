@@ -19,96 +19,44 @@ The app should perform basic logging using a PS3 compliant logger.
 
 ## Installation
 
-### Via Composer
-
 ```bash
-composer global require jeffochoa/amp-validator
+git clone https://github.com/pcualmac/image-Basekit-cli.git
 ```
-
-### Manually
-
-First, download the binary using `wget`:
+### Composer
 
 ```bash
-wget https://github.com/jeffochoa/amp-validator/blob/master/builds/amp-validator -O amp-validator
-```
-
-Change binary permissions:
-
-```bash
-sudo chmod ax amp-validator
-```
-
-Move to bin directory:
-
-```bash
-sudo mv amp-validator /usr/local/bin/amp-validator
+composer install
 ```
 
 ## Usage
 
 ```bash
-amp-validator
+php image-Basekit-cli command:validation /var/www/vhosts/image-Basekit-cli/public/download.jpeg
 ```
-
-### Singe page validation
-
-The given URL should be publicly accessible.
 
 ```bash
-amp-validator validate http://website.test/valid-amp-link
+php image-Basekit-cli command:delete /var/www/vhosts/image-Basekit-cli/public/download.jpeg
 ```
-
-### Validate a batch of links
-
-You can use the generated CSV report by [Google Webmaster Tools](https://www.google.com/webmasters/tools/home) (GWT) as input to validate locally.
-
-[![AMP online validation tool](https://raw.githubusercontent.com/jeffochoa/amp-validator/master/docs/csv-download.png)](https://www.google.com/webmasters/tools/accelerated-mobile-pages)
-
-Go to [https://www.google.com/webmasters/tools/accelerated-mobile-pages](https://www.google.com/webmasters/tools/accelerated-mobile-pages)
-
-Download the AMP report in `Search Appearance / Accelerate mobile pages`
-
-Once you have the file downloaded locally:
 
 ```bash
-amp-validator validate-batch path-to-file/downloaded.csv
+php image-Basekit-cli command:store /var/www/vhosts/image-Basekit-cli/public/download.jpeg
 ```
 
-This tool will read the CSV file generated on GWT to run the validation on each tests contained in the file, then you can select between the different types of output formats to export your report.
-
-```text
-
-    Please select an output format
-    ----------------------------------------------------------------------------------
-
-    ● Export to CSV file
-    ○ In console (summarized)
-    ○ In console (extended)
-    ○ Cancel
+```bash
+php image-Basekit-cli command:download /var/www/vhosts/image-Basekit-cli/public/download.jpeg
 ```
 
-#### Extra help to fix the errors in your page
-The following example is the output generated using the "In console (extended)" option:
+### List
 
-```text
------------------------------------------------------------------------------------
-| Key     | Value                                                                    |
------------------------------------------------------------------------------------
-| link    | https://you-given-url.test                                               |
-| error   | The attribute 'target' in tag 'a' is set to the invalid value 'blank'.   |
-| line    | 1221                                                                     |
-| col     | 3                                                                        |
-| code    | INVALID_ATTR_VALUE                                                       |
-| help    | https://www.ampproject.org/docs/reference/spec#links                     |
-| preview | https://search.google.com/test/amp?url=https://you-given-url.test        |
-------------------------------------------------------------------------------------
+- [x] Install Laravel-zero
+- [x] Hello Word
+- [x] Add Config file
+- [x] Support Class
+- [ ] Add Test
+- [ ] Add queue. Transfer to s3 or ftp can be a slowly task
+- [ ] Redfin command syntax. "more info from cliente is need."
+```bash
+php image-Basekit-cli command:download <source> <path> <destination> <path>
 ```
-
-If you click on the `preview` link, you'll be taken to the online google validation tool.
-
-![AMP online validation tool](https://raw.githubusercontent.com/jeffochoa/amp-validator/master/docs/test-online.jpg)
-
-## License
-
-AMP Validator is an open-sourced software licensed under the [MIT license](LICENSE.md).
+- [ ] Add Menu
+- [ ] Excute Build 
