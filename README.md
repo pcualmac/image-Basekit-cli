@@ -2,21 +2,20 @@
     <img src="https://raw.githubusercontent.com/jeffochoa/amp-validator/master/docs/example.png" alt="AMP validation Example" height="300">
 </p>
 
-<p align="center">
-  <a href="https://packagist.org/packages/jeffochoa/amp-validator"><img src="https://poser.pugx.org/jeffochoa/amp-validator/d/total.svg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/jeffochoa/amp-validator"><img src="https://poser.pugx.org/jeffochoa/amp-validator/v/stable.svg" alt="Latest Version"></a>
-  <a href="https://packagist.org/packages/jeffochoa/amp-validator"><img src="https://poser.pugx.org/jeffochoa/amp-validator/license.svg" alt="License"></a>
-</p>
 
-------
+## Task:
 
-## About AMP validation CLI tool
+You are required to write a small CLI app that handles image storage to be used as part of a wider application. You can assume actual capture of the image happens elsewhere in the wider application and the local path to an image can simply be passed as input to the CLI app.
 
-Test your Accelerated Mobile Pages right away from your terminal.
+ 
 
-[![AMP online validation tool](https://raw.githubusercontent.com/jeffochoa/amp-validator/master/docs/validation-video.jpg)](https://www.ampproject.org/docs/fundamentals/validate)
+The app should perform basic validation on the image and allow it’s storage, retrieval and deletion on the file system. Note whilst only file system storage is required in this test the module should be written in such a way that makes it easy to plug in future required storage methods eg S3, FTP etc using just a config change along with the new storage class.
 
-This package uses CLOUDFARE's [AMP validator API](https://blog.cloudflare.com/amp-validator-api/).
+ 
+
+The app should perform basic logging using a PS3 compliant logger.
+
+ 
 
 ## Installation
 
