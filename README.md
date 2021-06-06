@@ -2,10 +2,15 @@
     <img src="https://github.com/pcualmac/image-Basekit-cli/blob/master/Screenshot.png" alt="AMP validation Example" height="100">
 </p>
 
+<p align="center">
+  <a href="https://packagist.org/packages/jeffochoa/amp-validator"><img src="https://poser.pugx.org/jeffochoa/amp-validator/d/total.svg" alt="Total Downloads"></a>
+  <a href="https://packagist.org/packages/jeffochoa/amp-validator"><img src="https://poser.pugx.org/jeffochoa/amp-validator/v/stable.svg" alt="Latest Version"></a>
+  <a href="https://packagist.org/packages/jeffochoa/amp-validator"><img src="https://poser.pugx.org/jeffochoa/amp-validator/license.svg" alt="License"></a>
+</p>
 
 ## Task:
 
-You are required to write a small CLI app that handles image storage to be used as part of a wider application. You can assume actual capture of the image happens elsewhere in the wider application and the local path to an image can simply be passed as input to the CLI app.
+Small CLI app that handles image storage to be used as part of a wider application. You can assume actual capture of the image happens elsewhere in the wider application and the local path to an image can simply be passed as input to the CLI app.
 
  
 
@@ -15,7 +20,6 @@ The app should perform basic validation on the image and allow it’s storage, r
 
 The app should perform basic logging using a PS3 compliant logger.
 
- 
 
 ## Installation
 
