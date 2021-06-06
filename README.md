@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/pcualmac/image-Basekit-cli/blob/master/Screenshot.png" alt="AMP validation Example" height="300">
+    <img src="https://github.com/pcualmac/image-Basekit-cli/blob/master/Screenshot.png" alt="AMP validation Example" height="100">
 </p>
 
 <p align="center">
