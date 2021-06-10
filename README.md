@@ -53,4 +53,4 @@ php image-Basekit-cli command:download <source> <path> <destination> <path>
 - [ ] Excute Build 
 - [ ] Add to packagist
 
-[I'm an inline-style link](https://www.buymeacoffee.com/pcualmac)
+[buymeacoffee](https://www.buymeacoffee.com/pcualmac)
