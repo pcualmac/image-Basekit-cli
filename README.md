@@ -6,20 +6,9 @@
 
 </p>
 
-## Task:
+## Transfer Files :
 
-Small CLI app that handles image storage to be used as part of a wider application. You can assume actual capture of the image happens elsewhere in the wider application and the local path to an image can simply be passed as input to the CLI app.
-
- 
-
-The app should perform basic validation on the image and allow it’s storage, retrieval and deletion on the file system. Note whilst only file system storage is required in this test the module should be written in such a way that makes it easy to plug in future required storage methods eg S3, FTP etc using just a config change along with the new storage class.
-
- 
-
-The app should perform basic logging using a PS3 compliant logger.
-
-
-## Installation
+Use a config file to set which mimetype is allowed to be transferred## Installation
 
 ```bash
 git clone https://github.com/pcualmac/image-Basekit-cli.git
