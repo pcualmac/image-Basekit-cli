@@ -22,19 +22,19 @@ composer install
 ## Usage
 
 ```bash
-php image-Basekit-cli command:validation /var/www/vhosts/image-Basekit-cli/public/download.jpeg
+php image-cli command:validation /var/www/vhosts/image-Basekit-cli/public/download.jpeg
 ```
 
 ```bash
-php image-Basekit-cli command:delete /var/www/vhosts/image-Basekit-cli/public/download.jpeg
+php image-cli command:delete /var/www/vhosts/image-Basekit-cli/public/download.jpeg
 ```
 
 ```bash
-php image-Basekit-cli command:store /var/www/vhosts/image-Basekit-cli/public/download.jpeg
+php image-cli command:store /var/www/vhosts/image-Basekit-cli/public/download.jpeg
 ```
 
 ```bash
-php image-Basekit-cli command:download /var/www/vhosts/image-Basekit-cli/public/download.jpeg
+php image-cli command:download /var/www/vhosts/image-Basekit-cli/public/download.jpeg
 ```
 
 ### List
