@@ -4,7 +4,6 @@ namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
-use Validetor;
 use App\Support\Validation;
 
 use Storage;
@@ -34,10 +33,9 @@ class ValidationComand extends Command
      */
     public function handle()
     {
-        dd(app('validator'));
+        // dd(app('validator'));
         $realpath = $this->argument('realpath');
         $exists = Storage::has($realpath);
-
         if(!$exists)
         {
             $this->task("Is ".$realpath." a file?", function (){
@@ -52,9 +50,10 @@ class ValidationComand extends Command
             'MIME_types' => Storage::mimeType($realpath),
             'size' => Storage::size($realpath)
         ];
+        // dd($data);
         $Validator->name('Mimetype')->value($data['MIME_types'])->pattern('Mimetype')->required();
         $Validator->name('size')->value($data['size'])->min(config('file_validator.Memorisize_min_kb'))->max(config('file_validator.Memorisize_max_kb'));
-
+        // dd($Validator->isSuccess());
         if($Validator->isSuccess()){
             $this->task("Is ".$realpath." a valid image?", function () {
                 return true;
