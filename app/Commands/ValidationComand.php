@@ -4,7 +4,7 @@ namespace App\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
-// use App\Support\Validation as Validetor;
+use Validetor;
 use App\Support\Validation;
 
 use Storage;
@@ -34,6 +34,7 @@ class ValidationComand extends Command
      */
     public function handle()
     {
+        dd(app('validator'));
         $realpath = $this->argument('realpath');
         $exists = Storage::has($realpath);
 
